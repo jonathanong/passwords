@@ -2,9 +2,9 @@
   "name": "@jongleberry/passwords",
   "version": "1.0.0",
   "description": "Password creation and validation",
-  "main": "index.js",
+  "main": "lib",
   "scripts": {
-    "eslint": "eslint . --cache --ignore-path .gitignore",
+    "eslint": "eslint . --cache --cache-location node_modules/.cache/eslint --ignore-path .gitignore",
     "test": "jest"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "http-assert": "^1.4.1"
   },
   "devDependencies": {
+    "codecov": "^3.6.5",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
@@ -32,5 +33,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^25.3.0"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
