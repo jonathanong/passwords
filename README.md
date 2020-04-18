@@ -14,10 +14,6 @@ Features:
 - Configurable minimum password length with a default of 8 characters
 - HTTP client-friendly errors with [http-errors](https://www.npmjs.com/package/http-errors)
 
-TODO:
-
-- Allow deploying this as a Lambda
-
 ## API
 
 ```js
