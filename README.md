@@ -20,7 +20,7 @@ TODO:
 
 ## API
 
-```zsh
+```js
 const Passwords = require('@jongleberry/passwords')
 
 const passwords = new Passwords({
