@@ -9,3 +9,7 @@ Features:
   - Provides a configurable timeout for hitting HIBP
   - Caches HIBP responses locally to disk
 - Minimum password length
+
+TODO:
+
+- Allow deploying this as a Lambda
