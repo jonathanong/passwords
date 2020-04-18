@@ -1,0 +1,36 @@
+{
+  "name": "@jongleberry/passwords",
+  "version": "1.0.0",
+  "description": "Password creation and validation",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint . --cache --ignore-path .gitignore",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanong/passwords.git"
+  },
+  "keywords": [
+    "passwords"
+  ],
+  "author": "Jonathan Ong <me@jongleberry.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonathanong/passwords/issues"
+  },
+  "homepage": "https://github.com/jonathanong/passwords#readme",
+  "dependencies": {
+    "async-disk-cache": "^2.0.0",
+    "http-assert": "^1.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.3.0"
+  }
+}
