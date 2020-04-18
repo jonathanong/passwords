@@ -24,7 +24,7 @@ const pwned = [
 ]
 
 const timeout = 1000
-const onError = (err) => { throw err }
+const onError = (err) => err.code !== 'ECONNRESET' && console.error(err.stack)
 
 describe('pwned passwords', () => {
   pwned.forEach((password) => {
@@ -42,7 +42,7 @@ describe('not pwned passwords', () => {
 
 describe('when timing out', () => {
   test('return null', async () => {
-    const result = await isPasswordPwned('123456', 0, onError)
+    const result = await isPasswordPwned('123456', 1, onError)
     assert.strictEqual(result, null)
   })
 })
