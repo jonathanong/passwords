@@ -38,3 +38,20 @@ describe('createPassword & comparePassword', () => {
     assert(!(await passwords.comparePassword(password + '1', key, salt)))
   })
 })
+
+describe('createPassword & comparePassword w/ new scrypt options', () => {
+  const passwords1 = new Passwords({
+    cost: 16384
+  })
+
+  const passwords2 = new Passwords({
+    cost: 2 * 16384
+  })
+
+  it('should validate a password', async () => {
+    const password = crypto.randomBytes(64).toString('base64')
+    const [key, salt] = await passwords1.createPassword(password)
+    assert(await passwords1.comparePassword(password, key, salt))
+    assert(await passwords2.comparePassword(password, key, salt, passwords2.scryptOptions))
+  })
+})

@@ -43,6 +43,6 @@ NOTE: changing `scryptOptions` will change the derived key, so keep it consisten
 
 Create a derived key and salt from a password.
 
-### isValidPassword = await comparePassword(password, key, salt)
+### isValidPassword = await comparePassword(password, key, salt [, scryptOptions])
 
-Validate the password with the derived key and salt.
+Validate the password with the derived key and salt. `scryptOptions` is only necessary if it's different than the currently set options.
