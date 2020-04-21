@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [10.x, 12.x, 13.x]
     env:
       CI: true
       CODECOV_TOKEN: 9e670ae0-bcdf-439d-8e34-8c0eb53c3118
