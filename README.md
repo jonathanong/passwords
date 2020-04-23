@@ -39,7 +39,7 @@ const isValidPassword = await passwords.comparePassword('some password', key, sa
 
 NOTE: changing `scryptOptions` will change the derived key, so keep it consistent in your app or store it along with your password.
 
-### [key, salt] = await createPassword(password)
+### [key, salt, scryptOptions] = await createPassword(password)
 
 Create a derived key and salt from a password.
 
