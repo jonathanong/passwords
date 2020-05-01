@@ -20,7 +20,9 @@ const pwned = [
   'master',
   'admin',
   'passw0rd',
-  'hunter2'
+  'hunter2',
+  '123123',
+  'superman'
 ]
 
 const timeout = 1000
@@ -42,7 +44,7 @@ describe('not pwned passwords', () => {
 
 describe('when timing out', () => {
   test('return null', async () => {
-    const result = await isPasswordPwned('123456', 1, onError)
+    const result = await isPasswordPwned(crypto.randomBytes(256).toString('base64'), 1, onError)
     assert.strictEqual(result, null)
   })
 })
