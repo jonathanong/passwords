@@ -32,14 +32,12 @@ describe('pwned passwords', () => {
   pwned.forEach((password) => {
     test(password, async () => {
       assert(await isPasswordPwned(password, timeout, onError))
-      assert(await isPasswordPwned(password, timeout, onError))
     })
   })
 })
 
 describe('not pwned passwords', () => {
   test('random bytes', async () => {
-    assert(!(await isPasswordPwned(crypto.randomBytes(256).toString('base64'), timeout, onError)))
     assert(!(await isPasswordPwned(crypto.randomBytes(256).toString('base64'), timeout, onError)))
   })
 })
