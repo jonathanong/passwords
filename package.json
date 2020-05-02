@@ -1,6 +1,6 @@
 {
   "name": "@jongleberry/passwords",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Password creation and validation",
   "main": "lib",
   "scripts": {
