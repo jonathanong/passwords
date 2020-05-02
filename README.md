@@ -31,7 +31,6 @@ const isValidPassword = await passwords.comparePassword('some password', key, sa
 ### Options
 
 - `hibpTimeout = 1000` - timeout to [hibp](https://haveibeenpwned.com/API/v3#PwnedPasswords) in milliseconds. If for some reason hibp takes longer than this timeout, the password will be assumed to be valid.
-- `onError = (err) => console.error(err.stack || err)` - error handler for code ran in different event loops
 - `minimumPasswordLength = 8` - minimum password character length
 - `saltLength = 16` - salt length in bytes
 - `keyLength = 64` - derived key length in bytes

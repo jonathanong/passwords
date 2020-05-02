@@ -26,25 +26,24 @@ const pwned = [
 ]
 
 const timeout = 1000
-const onError = (err) => err.code !== 'ECONNRESET' && console.error(err.stack)
 
 describe('pwned passwords', () => {
   pwned.forEach((password) => {
     test(password, async () => {
-      assert(await isPasswordPwned(password, timeout, onError))
+      assert(await isPasswordPwned(password, timeout))
     })
   })
 })
 
 describe('not pwned passwords', () => {
   test('random bytes', async () => {
-    assert(!(await isPasswordPwned(crypto.randomBytes(256).toString('base64'), timeout, onError)))
+    assert(!(await isPasswordPwned(crypto.randomBytes(256).toString('base64'), timeout)))
   })
 })
 
 describe('when timing out', () => {
   test('return null', async () => {
-    const result = await isPasswordPwned(crypto.randomBytes(256).toString('base64'), 1, onError)
+    const result = await isPasswordPwned(crypto.randomBytes(256).toString('base64'), 1)
     assert.strictEqual(result, null)
   })
 })
